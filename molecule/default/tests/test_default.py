@@ -19,6 +19,8 @@ def test_packages(host):
         pkgs = ["desktop-file-utils", "tigervnc-server"]
     elif distribution in ["debian", "kali", "ubuntu"]:
         pkgs = ["desktop-file-utils", "tigervnc-standalone-server", "tigervnc-common"]
+    elif distribution in ["arch"]:
+        pkgs = ["tightvnc"]
     else:
         # We don't support this distribution
         assert False, f"Unsupported distribution {distribution}"
